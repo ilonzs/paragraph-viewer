@@ -1,2 +1,2 @@
 # paragraph-viewer
-Web application for reading large documents
+Web application for reading large documents.
