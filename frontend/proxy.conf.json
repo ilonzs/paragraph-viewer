@@ -1,0 +1,9 @@
+{
+  "/document-api/*": {
+    "target": "http://localhost:8080",
+    "pathRewrite": { "^/document-api": "" },
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,14 @@
+<mat-card *ngIf="paragraph; else: loadingCard" class="paragraph-card">
+  <h3 class="mat-primary"># {{ paragraph.id }}</h3>
+  <mat-card-content class="paragraph-card-content">
+    <div [innerHTML]="paragraph.content"></div>
+  </mat-card-content>
+</mat-card>
+<ng-template #loadingCard>
+  <mat-card class="paragraph-card loading-spinner">
+    <mat-spinner color="primary" [diameter]="30"></mat-spinner>
+    <div class="search-loading-text">
+      <div class="mat-h3">Loading paragraph ...</div>
+    </div>
+  </mat-card>
+</ng-template>

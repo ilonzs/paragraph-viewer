@@ -1,0 +1,11 @@
+<div class="floating-counter">
+  <div># Paragraphs cached: {{ paragraphs.getCacheLength() }}</div>
+  <div># Paragraphs rendered:
+    {{ documentViewPort ? documentViewPort.getRenderedRange().end - documentViewPort.getRenderedRange().start : 0 }}
+  </div>
+</div>
+<cdk-virtual-scroll-viewport #documentViewPort itemSize="196" class="paragraph-viewport" id="viewport" cdkScrollable>
+  <ng-container *cdkVirtualFor="let p of paragraphs; templateCacheSize: 0; trackBy: paragraphTrackBy" class="paragraph-item">
+    <paragraph-card [paragraph]="p"></paragraph-card>
+  </ng-container>
+</cdk-virtual-scroll-viewport>
